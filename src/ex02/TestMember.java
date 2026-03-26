@@ -57,6 +57,14 @@ class Member {
 		Member other = (Member) obj;
 		return id == other.id && Objects.equals(name, other.name);
 	}
+
+	// toString 재정의 - 각 변수가 어떻게 바뀌는지 알려고 
+	@Override
+	public String toString() {
+		return "Member [id=" + id + ", name=" + name + "]";
+	}
+	
+	
 	
 	
 	
@@ -73,6 +81,7 @@ public class TestMember {
 		System.out.println(m1);				// ex02.Member@18b4aac2
 		System.out.println(m1.toString());	// ex02.Member@18b4aac2
 		
+		System.out.println("=====================");
 		
 		Member m2 = new Member(2,"엄흥도");
 		m2.disp();
@@ -82,6 +91,7 @@ public class TestMember {
 		
 		System.out.println(m1 == m2);		// false
 		
+		System.out.println("=====================");
 		Member m3 = new Member(1, "단종");
 		System.out.println(m3);    			// ex02.Member@c387f44
 		System.out.println(m1 == m3);		// false  주소를 비교
