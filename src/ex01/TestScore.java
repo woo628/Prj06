@@ -62,7 +62,7 @@ class Score {
 		getGrade();
 	}
 	
-	
+	// private = 여기서만 쓰겠다 
 	private void  getTot() {
 		this.tot = this.kor + this.eng + this.mat;
 	}
